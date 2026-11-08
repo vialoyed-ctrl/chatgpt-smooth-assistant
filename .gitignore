@@ -1,0 +1,9 @@
+node_modules/
+dist/
+*.log
+tests/overlay-profile/
+tests/overlay-*.json
+tests/overlay-*.png
+tests/browser-benchmark-profile-*/
+.env
+.env.*

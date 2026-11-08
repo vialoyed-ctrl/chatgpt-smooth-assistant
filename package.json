@@ -1,0 +1,14 @@
+{
+  "name": "chatgpt-smooth-assistant",
+  "version": "0.14.4",
+  "private": true,
+  "description": "ChatGPT 流畅助手浏览器扩展及合成 DOM 回归测试",
+  "scripts": {
+    "check": "node scripts/check.cjs",
+    "test": "node --test tests/extension.test.cjs tests/history-performance.test.cjs",
+    "build": "node scripts/build.cjs"
+  },
+  "devDependencies": {
+    "jsdom": "26.1.0"
+  }
+}

@@ -1,0 +1,11 @@
+/* Installed at document_start: skip offscreen math before the first expensive layout. */
+html:not([data-smooth-paused]) :is([data-markdown-text-style="assistant-message"],.markdown,.prose) :is(p,pre,table,ul,ol,blockquote,figure,.katex-display) {
+  content-visibility: auto;
+  contain-intrinsic-block-size: auto 120px;
+}
+@media print {
+  html :is([data-markdown-text-style="assistant-message"],.markdown,.prose) :is(p,pre,table,ul,ol,blockquote,figure,.katex-display) {
+    content-visibility: visible !important;
+    contain: none !important;
+  }
+}

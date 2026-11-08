@@ -1,0 +1,63 @@
+{
+  "manifest_version": 3,
+  "name": "ChatGPT 流畅助手",
+  "version": "0.14.4",
+  "description": "最新消息优先、后台补齐长对话、界面内原生工具及多格式附件。",
+  "minimum_chrome_version": "120",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "katex.min.css",
+        "katex-fonts.css",
+        "fonts/*"
+      ],
+      "matches": [
+        "https://chatgpt.com/*",
+        "https://chat.openai.com/*"
+      ]
+    }
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://chatgpt.com/*",
+        "https://chat.openai.com/*"
+      ],
+      "css": [
+        "early.css"
+      ],
+      "run_at": "document_start"
+    },
+    {
+      "matches": [
+        "https://chatgpt.com/*",
+        "https://chat.openai.com/*"
+      ],
+      "js": [
+        "vendor.katex.min.js",
+        "math-styles.js",
+        "formulas.js",
+        "formatting.js",
+        "adapter.js",
+        "renderer.js",
+        "attachments.js",
+        "composer.js",
+        "native-popups.js",
+        "native-tools.js",
+        "reader.js",
+        "history.js",
+        "ui.js",
+        "content.js"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_title": "ChatGPT 流畅助手",
+    "default_popup": "popup.html"
+  }
+}
